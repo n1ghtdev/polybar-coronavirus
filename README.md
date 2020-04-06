@@ -3,7 +3,7 @@
 [![sample screenshot](https://i.imgur.com/jvdMCrs.png)](https://i.imgur.com/jvdMCrs.png)
 
 Polybar module which displays coronavirus cases/todayCases and
-deaths/todayDeaths. Stats being fetched from
+deaths/todayDeaths. Stats is fetching from
 [NovelCOVID/API](https://github.com/NovelCOVID/API).
 
 ### Dependencies
@@ -14,7 +14,14 @@ deaths/todayDeaths. Stats being fetched from
 ### Installation
 
 1. Download corona.py
-2. Add module as custom/script to polybar config
+
+```
+curl -O https://raw.githubusercontent.com/n1ghtdev/polybar-coronavirus/master/corona.py
+```
+
+2. Give execution permission to corona.py with `chmod +x corona.py`
+3. Add module with type=custom/script to polybar config
+4. Reload polybar
 
 Example:
 
