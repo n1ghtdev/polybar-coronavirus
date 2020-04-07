@@ -30,7 +30,7 @@ def get_print_output(corona_data):
     todayDeaths = str(corona_data['todayDeaths'])
 
     # lemonbar color formatting
-    output = f'{cases} %{{F#FF0000}}+{todayCases}%{{F-}} / {deaths} %{{F#00FF00}}+{todayDeaths}%{{F-}}'
+    output = f'{cases} %{{F#00FF00}}+{todayCases}%{{F-}} / {deaths} %{{F#FF0000}}+{todayDeaths}%{{F-}}'
     return output
 
 data = get_corona_data()
