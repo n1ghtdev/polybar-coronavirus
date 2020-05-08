@@ -3,7 +3,7 @@
 import sys
 import requests
 
-URL = "https://corona.lmao.ninja/all"
+URL = "https://corona.lmao.ninja/v2/all"
 headers = {'Content-Type': 'application/json'}
 
 def get_corona_data():
@@ -36,4 +36,4 @@ def get_print_output(corona_data):
 data = get_corona_data()
 data_output = get_print_output(data)
 
-sys.stderr.write(data_output)
+sys.stdout.write(data_output)
