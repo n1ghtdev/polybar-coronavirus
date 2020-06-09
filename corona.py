@@ -23,11 +23,14 @@ def get_corona_data():
     response_data = response.json()
     return response_data
 
+def format_string(string):
+    return '{:,}'.format(string).replace(',', ' ')
+
 def get_print_output(corona_data):
-    cases = str(corona_data['cases'])
-    todayCases = str(corona_data['todayCases'])
-    deaths = str(corona_data['deaths'])
-    todayDeaths = str(corona_data['todayDeaths'])
+    cases = format_string(corona_data['cases'])
+    todayCases = format_string(corona_data['todayCases'])
+    deaths = format_string(corona_data['deaths'])
+    todayDeaths = format_string(corona_data['todayDeaths'])
 
     # lemonbar color formatting
     output = f'{cases} %{{F#00FF00}}+{todayCases}%{{F-}} / {deaths} %{{F#FF0000}}+{todayDeaths}%{{F-}}'
